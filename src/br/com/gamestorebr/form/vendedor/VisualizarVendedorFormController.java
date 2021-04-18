@@ -1,6 +1,7 @@
 package br.com.gamestorebr.form.vendedor;
 
 import br.com.gamestorebr.GameStoreBrApplication;
+import br.com.gamestorebr.model.pessoa.Vendedor;
 import br.com.gamestorebr.repository.VendedorRepository;
 import br.com.gamestorebr.util.AlertHelper;
 import br.com.gamestorebr.util.DataBase;
@@ -18,12 +19,17 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Window;
 
-public class VendedorFormController implements Initializable {
+public class VisualizarVendedorFormController implements Initializable {
 
   private VendedorRepository vendedorRepository;
+
+  @FXML public TextField nomeField;
+
+  @FXML public TextField saldoField;
+
+  @FXML public TextField documentoField;
 
   @FXML public Button addVendedorButton;
 
@@ -46,17 +52,17 @@ public class VendedorFormController implements Initializable {
 
     vendedorRepository = DataBase.getVendedorRepository();
 
-    nomeCol.setCellValueFactory(new PropertyValueFactory<>("nome"));
+    //    nomeCol.setCellValueFactory(new PropertyValueFactory<>("nome"));
+    //
+    //    cnpjCol.setCellValueFactory(new PropertyValueFactory<>("cnpj"));
+    //
+    //    saldoCol.setCellValueFactory(new PropertyValueFactory<>("saldo"));
 
-    cnpjCol.setCellValueFactory(new PropertyValueFactory<>("cnpj"));
-
-    saldoCol.setCellValueFactory(new PropertyValueFactory<>("saldo"));
-
-    visualizarCol.setCellValueFactory(new PropertyValueFactory<>("visualizarButton"));
-
-    vendedoresTabView.setItems(listVendedores());
-
-    vendedoresTabView.refresh();
+    //    visualizarCol.setCellValueFactory(new PropertyValueFactory<>("visualizarButton"));
+    //
+    //    vendedoresTabView.setItems(listVendedores());
+    //
+    //    vendedoresTabView.refresh();
   }
 
   private ObservableList<VendedorForm> listVendedores() {
@@ -104,7 +110,20 @@ public class VendedorFormController implements Initializable {
   }
 
   public void handleVoltarButtonAction(final ActionEvent actionEvent) throws IOException {
-    GameStoreBrApplication.changeScene("form/menu/menu_form.fxml");
+    GameStoreBrApplication.changeScene("form/vendedor/vendedor_form.fxml");
+  }
+
+  public void carregarVendedor(final String documento) {
+
+    final Vendedor vendedorVisualizar =
+        vendedorRepository.listAll().stream()
+            .filter(vendedor -> vendedor.getDocumento().equals(documento))
+            .findFirst()
+            .get();
+
+    nomeField.setText(vendedorVisualizar.getNome());
+    documentoField.setText(vendedorVisualizar.getDocumento());
+    saldoField.setText(vendedorVisualizar.getSaldoFormatado());
   }
 
   //  https://riptutorial.com/javafx/example/28033/creating-custom-dialog

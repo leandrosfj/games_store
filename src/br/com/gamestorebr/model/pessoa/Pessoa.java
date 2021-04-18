@@ -1,10 +1,6 @@
 package br.com.gamestorebr.model.pessoa;
 
-import java.text.DecimalFormat;
-
 public abstract class Pessoa {
-
-  protected static DecimalFormat df2 = new DecimalFormat("#.##");
 
   private String nome;
 
@@ -16,14 +12,14 @@ public abstract class Pessoa {
     super();
   }
 
-  public Pessoa (String nome, double saldo, String documento) {
+  public Pessoa(final String nome, final double saldo, final String documento) {
     this.nome = nome;
     this.saldo = saldo;
     this.documento = documento;
   }
 
   public String getDocumento() {
-    return this.documento;
+    return documento;
   }
 
   public void setDocumento(final String documento) {
@@ -31,7 +27,7 @@ public abstract class Pessoa {
   }
 
   public String getNome() {
-    return this.nome;
+    return nome;
   }
 
   public void setNome(final String nome) {
@@ -39,7 +35,7 @@ public abstract class Pessoa {
   }
 
   public Double getSaldo() {
-    return this.saldo;
+    return saldo;
   }
 
   public void setSaldo(final Double saldo) {
@@ -47,6 +43,6 @@ public abstract class Pessoa {
   }
 
   public String getSaldoFormatado() {
-    return df2.format(this.getSaldo());
+    return "R$ " + String.format("%.2f", getSaldo());
   }
 }

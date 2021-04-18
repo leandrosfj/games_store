@@ -1,6 +1,6 @@
 package br.com.gamestorebr.form.vendedor;
 
-import br.com.gamestorebr.form.components.EditButton;
+import br.com.gamestorebr.form.components.VisualizarButton;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 
@@ -8,14 +8,14 @@ public class VendedorForm {
 
   private final SimpleStringProperty nome;
   private final SimpleStringProperty cnpj;
-  private final SimpleStringProperty action;
-  private final SimpleObjectProperty<EditButton> editButton;
+  private final SimpleStringProperty saldo;
+  private final SimpleObjectProperty<VisualizarButton> visualizarButton;
 
-  public VendedorForm(String nome, String cnpj, String action) {
+  public VendedorForm(final String nome, final String cnpj, final String saldo) {
     this.nome = new SimpleStringProperty(nome);
     this.cnpj = new SimpleStringProperty(cnpj);
-    this.action = new SimpleStringProperty(action);
-    editButton = new SimpleObjectProperty(new EditButton(nome));
+    this.saldo = new SimpleStringProperty(saldo);
+    visualizarButton = new SimpleObjectProperty(new VisualizarButton(cnpj));
   }
 
   public String getNome() {
@@ -26,7 +26,7 @@ public class VendedorForm {
     return nome;
   }
 
-  public void setNome(String nome) {
+  public void setNome(final String nome) {
     this.nome.set(nome);
   }
 
@@ -38,31 +38,31 @@ public class VendedorForm {
     return cnpj;
   }
 
-  public void setCnpj(String cnpj) {
+  public void setCnpj(final String cnpj) {
     this.cnpj.set(cnpj);
   }
 
-  public String getAction() {
-    return action.get();
+  public String getSaldo() {
+    return saldo.get();
   }
 
-  public SimpleStringProperty actionProperty() {
-    return action;
+  public SimpleStringProperty saldoProperty() {
+    return saldo;
   }
 
-  public void setAction(String action) {
-    this.action.set(action);
+  public void setSaldo(final String saldo) {
+    this.saldo.set(saldo);
   }
 
-  public EditButton getEditButton() {
-    return editButton.get();
+  public VisualizarButton getVisualizarButton() {
+    return visualizarButton.get();
   }
 
-  public SimpleObjectProperty<EditButton> editButtonProperty() {
-    return editButton;
+  public SimpleObjectProperty<VisualizarButton> visualizarButtonProperty() {
+    return visualizarButton;
   }
 
-  public void setEditButton(EditButton editButton) {
-    this.editButton.set(editButton);
+  public void setVisualizarButton(final VisualizarButton visualizarButton) {
+    this.visualizarButton.set(visualizarButton);
   }
 }
