@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/br/com/gamestorebr/form/vendedor/TableViewCatalogoItem.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/br/com/gamestorebr/form/vendedor/VendedorForm.java">
           <value>
             <Attribute>

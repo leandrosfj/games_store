@@ -29,13 +29,13 @@ public class VendedorFormController implements Initializable {
 
   @FXML public TableColumn visualizarCol;
 
-  @FXML private TableView<VendedorForm> vendedoresTabView;
+  @FXML private TableView<TableViewVendedorItem> vendedoresTabView;
 
-  @FXML public TableColumn<VendedorForm, String> nomeCol;
+  @FXML public TableColumn<TableViewVendedorItem, String> nomeCol;
 
-  @FXML public TableColumn<VendedorForm, String> cnpjCol;
+  @FXML public TableColumn<TableViewVendedorItem, String> cnpjCol;
 
-  @FXML public TableColumn<VendedorForm, String> saldoCol;
+  @FXML public TableColumn<TableViewVendedorItem, String> saldoCol;
 
   @FXML private TextField filtroCnpjField;
 
@@ -59,12 +59,12 @@ public class VendedorFormController implements Initializable {
     vendedoresTabView.refresh();
   }
 
-  private ObservableList<VendedorForm> listVendedores() {
+  private ObservableList<TableViewVendedorItem> listVendedores() {
     return FXCollections.observableArrayList(
         vendedorRepository.listAll().stream()
             .map(
                 vendedor ->
-                    new VendedorForm(
+                    new TableViewVendedorItem(
                         vendedor.getNome(), vendedor.getDocumento(), vendedor.getSaldoFormatado()))
             .collect(Collectors.toList()));
   }
@@ -79,13 +79,13 @@ public class VendedorFormController implements Initializable {
       return;
     }
 
-    final ObservableList<VendedorForm> vendedoresFiltrados =
+    final ObservableList<TableViewVendedorItem> vendedoresFiltrados =
         FXCollections.observableArrayList(
             vendedorRepository.listAll().stream()
                 .filter(vendedor -> vendedor.getDocumento().contains(filtroCnpjField.getText()))
                 .map(
                     vendedor ->
-                        new VendedorForm(
+                        new TableViewVendedorItem(
                             vendedor.getNome(),
                             vendedor.getDocumento(),
                             vendedor.getSaldoFormatado()))

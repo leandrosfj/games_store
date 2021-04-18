@@ -4,14 +4,14 @@ import br.com.gamestorebr.form.components.VisualizarButton;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 
-public class VendedorForm {
+public class TableViewVendedorItem {
 
   private final SimpleStringProperty nome;
   private final SimpleStringProperty cnpj;
   private final SimpleStringProperty saldo;
   private final SimpleObjectProperty<VisualizarButton> visualizarButton;
 
-  public VendedorForm(final String nome, final String cnpj, final String saldo) {
+  public TableViewVendedorItem(final String nome, final String cnpj, final String saldo) {
     this.nome = new SimpleStringProperty(nome);
     this.cnpj = new SimpleStringProperty(cnpj);
     this.saldo = new SimpleStringProperty(saldo);

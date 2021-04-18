@@ -8,7 +8,7 @@ public class Produto {
   private String nome;
   private Double precoUnitario;
 
-  public Produto(String nome, Double precoUnitario) {
+  public Produto(final String nome, final Double precoUnitario) {
 
     this.nome = nome;
     this.precoUnitario = precoUnitario;
@@ -21,11 +21,11 @@ public class Produto {
   @Override
   public String toString() {
 
-    return "    [" + this.codigo + "] - " + this.nome + " - Preço: R$ " + this.precoUnitario + "\n";
+    return "    [" + codigo + "] - " + nome + " - Preço: R$ " + precoUnitario + "\n";
   }
 
   public int getCodigo() {
-    return this.codigo;
+    return codigo;
   }
 
   public void setCodigo(final Integer codigo) {
@@ -33,7 +33,7 @@ public class Produto {
   }
 
   public String getNome() {
-    return this.nome;
+    return nome;
   }
 
   public void setNome(final String nome) {
@@ -41,7 +41,11 @@ public class Produto {
   }
 
   public Double getPrecoUnitario() {
-    return this.precoUnitario;
+    return precoUnitario;
+  }
+
+  public String getPrecoUnitarioFormatado() {
+    return "R$ " + String.format("%.2f", precoUnitario);
   }
 
   public void setPrecoUnitario(final Double precoUnitario) {
@@ -53,15 +57,15 @@ public class Produto {
     if (this == o) {
       return true;
     }
-    if (o == null || this.getClass() != o.getClass()) {
+    if (o == null || getClass() != o.getClass()) {
       return false;
     }
     final Produto produto = (Produto) o;
-    return this.nome.equals(produto.nome);
+    return nome.equals(produto.nome);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(this.nome);
+    return Objects.hash(nome);
   }
 }

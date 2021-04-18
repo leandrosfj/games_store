@@ -51,7 +51,6 @@
   <TextField fx:id="filtroCnpjField" maxWidth="-Infinity" prefHeight="40" prefWidth="200.0"
     GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
-
   <Button fx:id="filtrarVendedorButton" defaultButton="true" onAction="#handleFiltrarButtonAction"
     prefHeight="40" prefWidth="100" text="Filtrar" GridPane.columnIndex="0" GridPane.columnSpan="1"
     GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.rowSpan="1">
