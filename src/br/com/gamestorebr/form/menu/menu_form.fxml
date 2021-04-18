@@ -1,0 +1,101 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:controller="br.com.gamestorebr.form.menu.MenuFormController"
+  xmlns:fx="http://javafx.com/fxml" alignment="center"
+  hgap="10" vgap="10">
+
+  <padding><Insets top="40" right="40" bottom="40" left="40"/></padding>
+
+  <columnConstraints>
+    <ColumnConstraints minWidth="100" prefWidth="100"
+      maxWidth="Infinity" halignment="RIGHT">
+    </ColumnConstraints>
+    <ColumnConstraints minWidth="200" prefWidth="200"
+      maxWidth="Infinity" hgrow="ALWAYS">
+    </ColumnConstraints>
+  </columnConstraints>
+
+  <!-- Add Header Label -->
+  <Label text="Game Store BR" GridPane.columnIndex="0"
+    GridPane.rowIndex="0" GridPane.columnSpan="2"
+    GridPane.rowSpan="1" GridPane.halignment="CENTER" >
+    <font>
+      <Font name="Arial" size="30" ></Font>
+    </font>
+    <GridPane.margin>
+      <Insets top="20" right="0" bottom="20" left="0"></Insets>
+    </GridPane.margin>
+  </Label>
+
+
+
+<!--  &lt;!&ndash; Add Name Label &ndash;&gt;-->
+<!--  <Label text="Full Name : " GridPane.columnIndex="0"-->
+<!--    GridPane.rowIndex="1" >-->
+<!--  </Label>-->
+<!--  &lt;!&ndash; Add Name Text Field &ndash;&gt;-->
+<!--  <TextField fx:id="nameField" prefHeight="40"-->
+<!--    GridPane.columnIndex="1" GridPane.rowIndex="1"/>-->
+
+
+<!--  &lt;!&ndash; Add Email Label &ndash;&gt;-->
+<!--  <Label text="Email ID : " GridPane.columnIndex="0"-->
+<!--    GridPane.rowIndex="2" >-->
+<!--  </Label>-->
+<!--  &lt;!&ndash; Add Email Text Field &ndash;&gt;-->
+<!--  <TextField fx:id="emailField" prefHeight="40"-->
+<!--    GridPane.columnIndex="1" GridPane.rowIndex="2"/>-->
+
+
+
+<!--  &lt;!&ndash; Add Password Label &ndash;&gt;-->
+<!--  <Label text="Password : " GridPane.columnIndex="0"-->
+<!--    GridPane.rowIndex="3" >-->
+<!--  </Label>-->
+<!--  &lt;!&ndash; Add Password Field &ndash;&gt;-->
+<!--  <PasswordField fx:id="passwordField" prefHeight="40"-->
+<!--    GridPane.columnIndex="1" GridPane.rowIndex="3"/>-->
+
+
+  <!-- Add Submit Button -->
+  <Button fx:id="cadastrarVendaBtn" text="Cadastrar Venda"
+    prefWidth="200" prefHeight="40" defaultButton="true"
+    GridPane.columnIndex="0" GridPane.rowIndex="3"
+    GridPane.columnSpan="2" GridPane.rowSpan="1"
+    GridPane.halignment="CENTER"
+    onAction="#handleCadastrarVendaButtonAction">
+    <GridPane.margin>
+      <Insets top="20" right="0" bottom="20" left="0"></Insets>
+    </GridPane.margin>
+  </Button>
+
+  <Button fx:id="consultarVendedoresBtn" text="Consultar Vendedores"
+    prefWidth="200" prefHeight="40" defaultButton="true"
+    GridPane.columnIndex="0" GridPane.rowIndex="4"
+    GridPane.columnSpan="2" GridPane.rowSpan="1"
+    GridPane.halignment="CENTER"
+    onAction="#handleConsultarVendedoresButtonAction">
+    <GridPane.margin>
+      <Insets top="20" right="0" bottom="20" left="0"></Insets>
+    </GridPane.margin>
+  </Button>
+
+  <Button fx:id="consultarClientesBrn" text="Consultar Clientes"
+    prefWidth="200" prefHeight="40" defaultButton="true"
+    GridPane.columnIndex="0" GridPane.rowIndex="5"
+    GridPane.columnSpan="2" GridPane.rowSpan="1"
+    GridPane.halignment="CENTER"
+    onAction="#handleConsultarCompradoresButtonAction">
+    <GridPane.margin>
+      <Insets top="20" right="0" bottom="20" left="0"></Insets>
+    </GridPane.margin>
+  </Button>
+
+</GridPane>
