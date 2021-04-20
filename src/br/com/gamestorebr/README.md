@@ -1,35 +1,24 @@
-# Game Store BR
+# Game Store BR - Venda de jogos
 
-### Sistema de cadastro de compradores e vendedores onde é possível registrar um catálogo de produtos bem como compras realizadas. As compras podem ser realizadas por diferentes formas de pagamento.
+### Sistema de cadastro de compras, utilizando conceito de vendedor/cliente e carrinho de compras. As compras podem ser realizadas por diferentes formas de pagamento.
 
 **Funcionalidades do sistema:**
 
-- **Cadastrar Comprador:** Cadastra um comprador ao informar o nome, CPF e saldo inicial. Não podem
-  existir dois compradores com o mesmo CPF.
+- **Cadastrar Compra:** Registra uma compra ao informar o comprador, o vendedor, a forma de
+  pagamento e escolher os itens do carrinho de compras. Neste caso, de acordo com o meio de
+  pagamento, a transação atualiza o saldo, os valores a pagar e as compras realizadas do cliente
+  informado, assim como o saldo, os pagamentos pendentes e as vendas realizadas do vendedor
+  informado.
 
-- **Listar Compradores:** Exibe na tela uma lista com informações resumidas dos compradores
-  cadastrados no sistema, contendo os dados pessoais, compras e valores a pagar.
-- **Consultar Comprador:** Realiza a consulta dos dados de um comprador ao informar o seu CPF.
+- **Visualizar Vendedores:** Exibe uma tela contendo uma lista com informações resumidas dos
+  vendedores cadastrados no sistema, contendo os seus dados pessoais resumidos. É possível filtrar
+  vendedores com o CNPJ ou parte dele. Ao clicar no botão “Visualizar”, o sistema mostra uma tela
+  com informações detalhadas do vendedor, incluindo o seu catálogo, vendas e pagamentos pendentes.
 
-- **Cadastrar Vendedor:** Cadastra um vendedor ao informar o nome e CNPJ. Não podem existir dois
-  vendedores com o mesmo CNPJ.
-
-- **Listar Vendedores:** Exibe na tela uma lista com informações resumidas dos vendedores
-  cadastrados no sistema, contendo os dados pessoais, vendas, valores a receber e catálogo de
-  produtos.
-
-- **Consultar Vendedor:** Exibe os dados de um vendedor ao informar o seu CNPJ.
-
-- **Cadastrar Produto:** Cadastra um produto ao informar o CPNJ do vendedor que contém o catálogo de
-  destino, nome e valor do produto.
-
-- **Registrar Transação Comercial:** Registra uma transação do tipo compra/venda ao informar o CPF
-  do comprador, CNPJ do vendedor e escolher a lista de produtos e a forma de pagamento. Neste caso,
-  de acordo com o meio de pagamento, a transação atualiza o saldo, os valores a pagar e as compras
-  realizadas do comprador informado, assim como o saldo, os valores a receber e as vendas realizadas
-  do vendedor informado.
-
-**Conceitos do sistema:**
+- **Visualizar Clientes:** Exibe uma tela contendo uma lista com informações resumidas dos clientes
+  cadastrados no sistema, contendo os seus dados pessoais resumidos. É possível filtrar clientes com
+  o CPF ou parte dele. Ao clicar no botão “Visualizar”, o sistema mostra uma tela com informações
+  detalhadas do cliente, incluindo as suas compras e valores a pagar pendentes.
 
 - **Formas de Pagamento:**
 
@@ -45,31 +34,6 @@
     - Crédito: Coloca o valor na lista de valores a pagar do comprador e adiciona nos valores a
       receber do vendedor, descontado da taxa percentual de cobrança da operadora do cartão.
 
-- **Compra/Venda**:
-    - CPF Comprador
-    - CNPJ do Vendedor
-    - Forma de Pagamento
-    - Produtos
-
-- **Comprador**
-    - Nome
-    - CPF
-    - Saldo da conta
-    - Valores a pagar
-    - Compras realizadas
-
-- **Vendedor**
-    - Nome
-    - Saldo da conta
-    - Valores a receber
-    - Vendas realizadas
-    - Catálogo de produtos
-
-- **Produto**
-    - Código
-    - Nome
-    - Preço
-
 > To Do:
 
 > A interface para o cadastro das compras deve implementar uma estrutura de carrinho de compras que vai sendo preenchido à medida que o usuário inclui os itens.
@@ -81,7 +45,5 @@
 > Utilize corretamente generics no uso das coleções da Java Collection.
 
 > Utilize corretamente o tipo especial Enum.
-
-> Tratar exceções utilizando Exceptions
 
 
