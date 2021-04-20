@@ -9,20 +9,20 @@ import br.com.gamestorebr.repository.VendedorRepository;
 
 public class DataBase {
 
-  private static CompradorRepository compradorRepository = new CompradorRepository();
-  private static VendedorRepository vendedorRepository = new VendedorRepository();
-  private static TransacaoRepository transacaoRepository = new TransacaoRepository();
+  private static final CompradorRepository compradorRepository = new CompradorRepository();
+  private static final VendedorRepository vendedorRepository = new VendedorRepository();
+  private static final TransacaoRepository transacaoRepository = new TransacaoRepository();
 
-  public static void init(){
+  public static void init() {
     populateCompradores();
     populateVendedores();
   }
 
   private static void populateCompradores() {
 
-    final Comprador comprador1 = new Comprador("Leandro",500,"12345678900");
-    final Comprador comprador2 = new Comprador("Ana",800,"98765432100");
-    final Comprador comprador3 = new Comprador("Rafael",200,"12312312300");
+    final Comprador comprador1 = new Comprador("Leandro", 500, "123.456.789-00");
+    final Comprador comprador2 = new Comprador("Ana", 800, "987.654.321-00");
+    final Comprador comprador3 = new Comprador("Rafael", 200, "123.123.123-00");
 
     compradorRepository.add(comprador1);
     compradorRepository.add(comprador2);
@@ -31,8 +31,8 @@ public class DataBase {
 
   private static void populateVendedores() {
 
-    final Vendedor vendedor1 = new Vendedor("Felipe","99988877700");
-    final Vendedor vendedor2 = new Vendedor("Marcos","66655544400");
+    final Vendedor vendedor1 = new Vendedor("Felipe", "99.888.777/0001-66");
+    final Vendedor vendedor2 = new Vendedor("Marcos", "66.555.444/0001-33");
 
     vendedorRepository.add(vendedor1);
     vendedorRepository.add(vendedor2);
@@ -40,7 +40,7 @@ public class DataBase {
     populateCatalogo(vendedor1, vendedor2);
   }
 
-  private static void populateCatalogo(Vendedor vendedor1, Vendedor vendedor2){
+  private static void populateCatalogo(final Vendedor vendedor1, final Vendedor vendedor2) {
 
     final Produto produto1 = new Produto("God Of War", 198.90);
     final Produto produto2 = new Produto("Mortal Kombat", 159.95);

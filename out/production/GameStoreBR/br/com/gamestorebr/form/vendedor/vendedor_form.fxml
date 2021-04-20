@@ -84,7 +84,7 @@
       <TableColumn fx:id="nomeCol" editable="false" text="Nome"/>
       <TableColumn fx:id="cnpjCol" editable="false" text="CNPJ"/>
       <TableColumn fx:id="saldoCol" editable="false" maxWidth="200" minWidth="200"
-        style="-fx-alignment: CENTER-RIGHT;" text="Saldo"/>
+        style="-fx-alignment: CENTER;" text="Saldo"/>
       <TableColumn fx:id="visualizarCol" editable="false" maxWidth="200" minWidth="200"
         style="-fx-alignment: CENTER;" text="Ação"/>
     </columns>

@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <GridPane alignment="TOP_LEFT" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.2"
   xmlns:fx="http://javafx.com/fxml/1"
-  fx:controller="br.com.gamestorebr.form.vendedor.VendedorFormController">
+  fx:controller="br.com.gamestorebr.form.cliente.ClienteFormController">
 
   <padding>
     <Insets bottom="10" left="10" right="10" top="10"/>
@@ -29,7 +29,7 @@
   </columnConstraints>
 
   <!-- Add Header Label -->
-  <Label text="Consultar Vendedores" GridPane.columnIndex="0" GridPane.columnSpan="2"
+  <Label text="Consultar Clientes" GridPane.columnIndex="0" GridPane.columnSpan="2"
     GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.rowSpan="1">
 
     <font>
@@ -42,16 +42,16 @@
 
   </Label>
 
-  <Label text="CNPJ : " GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+  <Label text="CPF : " GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="1">
     <font>
       <Font name="System Bold" size="13.0"/>
     </font>
   </Label>
 
-  <TextField fx:id="filtroCnpjField" maxWidth="-Infinity" prefHeight="40" prefWidth="200.0"
+  <TextField fx:id="filtroCpfField" maxWidth="-Infinity" prefHeight="40" prefWidth="200.0"
     GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
-  <Button fx:id="filtrarVendedorButton" defaultButton="true" onAction="#handleFiltrarButtonAction"
+  <Button fx:id="filtrarClienteButton" defaultButton="true" onAction="#handleFiltrarButtonAction"
     prefHeight="40" prefWidth="100" text="Filtrar" GridPane.columnIndex="0" GridPane.columnSpan="1"
     GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.rowSpan="1">
     <GridPane.margin>
@@ -59,7 +59,7 @@
     </GridPane.margin>
   </Button>
 
-  <Button fx:id="voltarVendedorButton" defaultButton="false" onAction="#handleVoltarButtonAction"
+  <Button fx:id="voltarClienteButton" defaultButton="false" onAction="#handleVoltarButtonAction"
     prefHeight="40" prefWidth="100" text="Voltar" GridPane.columnIndex="1" GridPane.columnSpan="1"
     GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.rowSpan="1">
     <GridPane.margin>
@@ -73,7 +73,7 @@
   <!--    </GridPane.margin>-->
   <!--  </Button>-->
 
-  <TableView fx:id="vendedoresTabView" prefHeight="550.0" prefWidth="200.0"
+  <TableView fx:id="clientesTabView" prefHeight="550.0" prefWidth="200.0"
     GridPane.columnSpan="2147483647" GridPane.rowIndex="4">
 
     <columnResizePolicy>
@@ -82,7 +82,7 @@
 
     <columns>
       <TableColumn fx:id="nomeCol" editable="false" text="Nome"/>
-      <TableColumn fx:id="cnpjCol" editable="false" text="CNPJ"/>
+      <TableColumn fx:id="cpfCol" editable="false" text="CPF"/>
       <TableColumn fx:id="saldoCol" editable="false" maxWidth="200" minWidth="200"
         style="-fx-alignment: CENTER;" text="Saldo"/>
       <TableColumn fx:id="visualizarCol" editable="false" maxWidth="200" minWidth="200"

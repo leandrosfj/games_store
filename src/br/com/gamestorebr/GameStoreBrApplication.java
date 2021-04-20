@@ -1,6 +1,7 @@
 package br.com.gamestorebr;
 
 import br.com.gamestorebr.core.exception.NotFoundException;
+import br.com.gamestorebr.form.cliente.VisualizarClienteFormController;
 import br.com.gamestorebr.form.vendedor.VendedorFormController;
 import br.com.gamestorebr.form.vendedor.VisualizarVendedorFormController;
 import br.com.gamestorebr.util.AlertHelper;
@@ -64,6 +65,21 @@ public class GameStoreBrApplication extends Application {
     final VisualizarVendedorFormController controller = loader.getController();
 
     controller.carregarVendedor(documento);
+    primaryStage.getScene().setRoot(pane);
+  }
+
+  @FXML
+  public static void visualizarCliente(final String documento) throws IOException {
+
+    final FXMLLoader loader =
+        new FXMLLoader(
+            GameStoreBrApplication.class.getResource("form/cliente/visualizar_cliente_form.fxml"));
+
+    final Parent pane = loader.load();
+
+    final VisualizarClienteFormController controller = loader.getController();
+
+    controller.carregarCliente(documento);
     primaryStage.getScene().setRoot(pane);
   }
 

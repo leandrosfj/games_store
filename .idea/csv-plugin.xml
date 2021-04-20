@@ -3,6 +3,34 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="/src/br/com/gamestorebr/form/cliente/ClienteFormController.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/br/com/gamestorebr/form/cliente/TableViewComprasItem.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/br/com/gamestorebr/form/cliente/TableViewPagamentosPendentesItem.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/br/com/gamestorebr/form/cliente/VisualizarClienteFormController.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/br/com/gamestorebr/form/components/EditButton.java">
           <value>
             <Attribute>
@@ -10,7 +38,28 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/br/com/gamestorebr/form/components/VisualizarClienteButton.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/br/com/gamestorebr/form/vendedor/TableViewCatalogoItem.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/br/com/gamestorebr/form/vendedor/TableViewPagamentosPendentesItem.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/br/com/gamestorebr/form/vendedor/TableViewVendasItem.java">
           <value>
             <Attribute>
               <option name="separator" value=";" />
@@ -42,6 +91,20 @@
           <value>
             <Attribute>
               <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/br/com/gamestorebr/model/pessoa/ContaPagarReceber.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/br/com/gamestorebr/model/pessoa/Vendedor.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
             </Attribute>
           </value>
         </entry>

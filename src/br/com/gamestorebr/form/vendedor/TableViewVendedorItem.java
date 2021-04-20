@@ -1,6 +1,6 @@
 package br.com.gamestorebr.form.vendedor;
 
-import br.com.gamestorebr.form.components.VisualizarButton;
+import br.com.gamestorebr.form.components.VisualizarVendedorButton;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 
@@ -9,13 +9,13 @@ public class TableViewVendedorItem {
   private final SimpleStringProperty nome;
   private final SimpleStringProperty cnpj;
   private final SimpleStringProperty saldo;
-  private final SimpleObjectProperty<VisualizarButton> visualizarButton;
+  private final SimpleObjectProperty<VisualizarVendedorButton> visualizarButton;
 
   public TableViewVendedorItem(final String nome, final String cnpj, final String saldo) {
     this.nome = new SimpleStringProperty(nome);
     this.cnpj = new SimpleStringProperty(cnpj);
     this.saldo = new SimpleStringProperty(saldo);
-    visualizarButton = new SimpleObjectProperty(new VisualizarButton(cnpj));
+    visualizarButton = new SimpleObjectProperty(new VisualizarVendedorButton(cnpj));
   }
 
   public String getNome() {
@@ -54,15 +54,15 @@ public class TableViewVendedorItem {
     this.saldo.set(saldo);
   }
 
-  public VisualizarButton getVisualizarButton() {
+  public VisualizarVendedorButton getVisualizarButton() {
     return visualizarButton.get();
   }
 
-  public SimpleObjectProperty<VisualizarButton> visualizarButtonProperty() {
+  public SimpleObjectProperty<VisualizarVendedorButton> visualizarButtonProperty() {
     return visualizarButton;
   }
 
-  public void setVisualizarButton(final VisualizarButton visualizarButton) {
+  public void setVisualizarButton(final VisualizarVendedorButton visualizarButton) {
     this.visualizarButton.set(visualizarButton);
   }
 }

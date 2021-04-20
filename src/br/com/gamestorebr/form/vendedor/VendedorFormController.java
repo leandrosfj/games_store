@@ -74,22 +74,32 @@ public class VendedorFormController implements Initializable {
 
     final Window owner = filtrarVendedorButton.getScene().getWindow();
 
-    if (filtroCnpjField.getText() == null || filtroCnpjField.getText().isEmpty()) {
-      AlertHelper.showAlert(AlertType.WARNING, owner, "Atenção", "Informe o CNPJ do Vendedor");
-      return;
-    }
+    final ObservableList<TableViewVendedorItem> vendedoresFiltrados;
 
-    final ObservableList<TableViewVendedorItem> vendedoresFiltrados =
-        FXCollections.observableArrayList(
-            vendedorRepository.listAll().stream()
-                .filter(vendedor -> vendedor.getDocumento().contains(filtroCnpjField.getText()))
-                .map(
-                    vendedor ->
-                        new TableViewVendedorItem(
-                            vendedor.getNome(),
-                            vendedor.getDocumento(),
-                            vendedor.getSaldoFormatado()))
-                .collect(Collectors.toList()));
+    if (filtroCnpjField.getText() == null || filtroCnpjField.getText().isEmpty()) {
+      vendedoresFiltrados =
+          FXCollections.observableArrayList(
+              vendedorRepository.listAll().stream()
+                  .map(
+                      vendedor ->
+                          new TableViewVendedorItem(
+                              vendedor.getNome(),
+                              vendedor.getDocumento(),
+                              vendedor.getSaldoFormatado()))
+                  .collect(Collectors.toList()));
+    } else {
+      vendedoresFiltrados =
+          FXCollections.observableArrayList(
+              vendedorRepository.listAll().stream()
+                  .filter(vendedor -> vendedor.getDocumento().contains(filtroCnpjField.getText()))
+                  .map(
+                      vendedor ->
+                          new TableViewVendedorItem(
+                              vendedor.getNome(),
+                              vendedor.getDocumento(),
+                              vendedor.getSaldoFormatado()))
+                  .collect(Collectors.toList()));
+    }
 
     if (vendedoresFiltrados.isEmpty()) {
       AlertHelper.showAlert(
@@ -106,21 +116,4 @@ public class VendedorFormController implements Initializable {
   public void handleVoltarButtonAction(final ActionEvent actionEvent) throws IOException {
     GameStoreBrApplication.changeScene("form/menu/menu_form.fxml");
   }
-
-  //  https://riptutorial.com/javafx/example/28033/creating-custom-dialog
-  //
-  //    public void handleAddVendedorButtonAction(final ActionEvent actionEvent) {
-  //      final Dialog<ButtonType> dialog =
-  //          getCheckPrintDialog(primaryStage, "Enter starting check number");
-  //
-  //      dialog
-  //          .showAndWait()
-  //          .filter(result -> result == printButtonType)
-  //          .ifPresent(
-  //              result -> {
-  //                // this is for this example only, normaly you already have this value
-  //                endingNumber.setValue(startingNumber.getValue() + 1);
-  //                printChecks(startingNumber.getValue(), endingNumber.getValue());
-  //              });
-  //    }
 }

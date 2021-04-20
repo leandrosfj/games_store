@@ -73,48 +73,95 @@
     prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 
 
-  <TabPane prefHeight="520.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE"
-    GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="LEFT"
+  <TabPane prefHeight="400.0" minHeight="400.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE"
+    GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER"
     GridPane.rowIndex="4" GridPane.rowSpan="1">
     <tabs>
 
       <Tab text="Catálogo de Produtos">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="200.0"/>
           <TableView fx:id="catalogoTabView" prefHeight="550.0" prefWidth="200.0"
-            GridPane.columnSpan="2147483647">
+          >
 
             <columnResizePolicy>
               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
             </columnResizePolicy>
 
             <columns>
-              <TableColumn fx:id="catalogoIdCol" editable="false" minWidth="200.0" prefWidth="200.0"
-                text="Código"/>
-              <TableColumn fx:id="catalogoNomeCol" editable="false" maxWidth="200.0"
-                minWidth="200.0" prefWidth="200.0" text="Nome"/>
+              <TableColumn fx:id="catalogoIdCol" editable="false" style="-fx-alignment: CENTER;"
+                minWidth="200.0" maxWidth="200.0" text="Código"/>
+
+              <TableColumn fx:id="catalogoNomeCol" editable="false"
+                minWidth="200.0" text="Nome"/>
+
               <TableColumn fx:id="catalogoPrecoUnitarioCol" editable="false"
-                style="-fx-alignment: CENTER-RIGHT;" text="Preço Unitário"/>
+                style="-fx-alignment: CENTER-RIGHT;" minWidth="200.0" maxWidth="200.0"
+                text="Preço Unitário"/>
             </columns>
+
           </TableView>
         </content>
       </Tab>
       <Tab text="Vendas Realizadas">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+          <TableView fx:id="vendasRealizadasTabView" prefHeight="550.0" prefWidth="200.0">
+
+            <columnResizePolicy>
+              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+
+            <columns>
+              <TableColumn fx:id="vendasClienteCol" editable="false" minWidth="250.0"
+                prefWidth="250.0" maxWidth="250.0" text="Cliente"/>
+
+              <TableColumn fx:id="vendasItensCol" editable="false"
+                minWidth="200.0" prefWidth="200.0" text="Itens"/>
+
+              <TableColumn fx:id="vendasPagamentoCol" editable="false" maxWidth="150.0"
+                minWidth="150.0" prefWidth="150.0" style="-fx-alignment: CENTER;" text="Pagamento"/>
+
+              <TableColumn fx:id="vendasValorTotalCol" editable="false" maxWidth="150.0"
+                minWidth="150.0" prefWidth="150.0" style="-fx-alignment: CENTER-RIGHT;"
+                text="Valor Total"/>
+            </columns>
+
+          </TableView>
         </content>
       </Tab>
-      <Tab text="Vendas à Prazo">
+      <Tab text="Transações Pendentes">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+          <TableView fx:id="pagamentosPendentesTabView" prefHeight="550.0" prefWidth="200.0">
+
+            <columnResizePolicy>
+              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+
+            <columns>
+              <TableColumn fx:id="pagamentosPendentesValorCol" editable="false" minWidth="250.0"
+                prefWidth="250.0" maxWidth="250.0" style="-fx-alignment: CENTER-RIGHT;"
+                text="Valor"/>
+
+              <TableColumn fx:id="pagamentosPendentesTipoCol" editable="false"
+                minWidth="250.0" prefWidth="250.0" style="-fx-alignment: CENTER;" text="Pagamento"/>
+
+              <TableColumn fx:id="pagamentosPendentesVencimentoCol" editable="false"
+                minWidth="250.0" prefWidth="250.0" style="-fx-alignment: CENTER;"
+                text="Vencimento"/>
+            </columns>
+
+          </TableView>
         </content>
       </Tab>
     </tabs>
   </TabPane>
 
-
   <Button fx:id="voltarVendedorButton" defaultButton="false" onAction="#handleVoltarButtonAction"
-    prefHeight="40" prefWidth="100" text="Voltar" GridPane.columnIndex="0" GridPane.columnSpan="1"
+    prefHeight="50" minHeight="50.0" maxHeight="50.0" prefWidth="100" text="Voltar"
+    GridPane.columnIndex="0"
+    GridPane.columnSpan="1"
     GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.rowSpan="1">
     <GridPane.margin>
       <Insets bottom="20" left="0" right="0" top="20"/>
@@ -129,7 +176,6 @@
     <RowConstraints/>
   </rowConstraints>
 
-
   <rowConstraints>
     <RowConstraints/>
     <RowConstraints/>
@@ -152,5 +198,4 @@
     <RowConstraints/>
     <RowConstraints/>
   </rowConstraints>
-
 </GridPane>

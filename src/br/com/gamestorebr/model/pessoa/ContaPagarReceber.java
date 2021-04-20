@@ -16,21 +16,29 @@ public class ContaPagarReceber {
   }
 
   public Double getValor() {
-    return this.valor;
+    return valor;
   }
 
   public LocalDate getDataVencimento() {
-    return this.dataVencimento;
+    return dataVencimento;
+  }
+
+  public String getDataVencimentoFormatada() {
+    return dataVencimento.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
   }
 
   @Override
   public String toString() {
     return "   Vencimento "
-        + this.dataVencimento.format(DateTimeFormatter.ISO_LOCAL_DATE)
+        + dataVencimento.format(DateTimeFormatter.ISO_LOCAL_DATE)
         + " - R$ "
-        + this.valor
+        + valor
         + " - "
-        + this.tipo
+        + tipo
         + "\n";
+  }
+
+  public String getTipo() {
+    return tipo;
   }
 }

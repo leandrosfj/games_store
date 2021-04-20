@@ -4,9 +4,9 @@ import br.com.gamestorebr.GameStoreBrApplication;
 import java.io.IOException;
 import javafx.scene.control.Button;
 
-public class VisualizarButton extends Button {
+public class VisualizarVendedorButton extends Button {
 
-  public VisualizarButton(final String documento) {
+  public VisualizarVendedorButton(final String documento) {
     super("Visualizar");
 
     setOnAction(
