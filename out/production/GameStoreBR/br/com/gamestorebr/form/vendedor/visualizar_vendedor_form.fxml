@@ -130,7 +130,7 @@
           </TableView>
         </content>
       </Tab>
-      <Tab text="Transações Pendentes">
+      <Tab text="Pagamentos Pendentes">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
           <TableView fx:id="pagamentosPendentesTabView" prefHeight="550.0" prefWidth="200.0">

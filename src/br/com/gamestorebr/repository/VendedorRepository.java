@@ -15,33 +15,44 @@ public class VendedorRepository {
 
   public void add(final Vendedor vendedor) {
 
-    if (this.registros.get(vendedor.getDocumento()) != null) {
+    if (registros.get(vendedor.getDocumento()) != null) {
 
       System.out.println("\nERRO: Vendedor já cadastrado para CNPJ informado...");
 
       return;
     }
 
-    this.registros.putIfAbsent(vendedor.getDocumento(), vendedor);
+    registros.putIfAbsent(vendedor.getDocumento(), vendedor);
 
     System.out.println("\nVendedor cadastrado com sucesso!");
   }
 
   public Vendedor get(final String documento) {
-    return this.registros.get(documento);
+    return registros.get(documento);
+  }
+
+  public void update(final Vendedor vendedor) {
+    registros.put(vendedor.getDocumento(), vendedor);
+  }
+
+  public Vendedor getByName(final String nome) {
+    return registros.values().stream()
+        .filter(vendedor -> vendedor.getNome().equals(nome))
+        .findFirst()
+        .orElse(null);
   }
 
   public void delete(final String documento) {
-    this.registros.remove(documento);
+    registros.remove(documento);
   }
 
   public List<Vendedor> listAll() {
-    return new ArrayList<>(this.registros.values());
+    return new ArrayList<>(registros.values());
   }
 
   public void addProduto(final String documento, final Produto produto) {
 
-    final Vendedor vendedor = this.get(documento);
+    final Vendedor vendedor = get(documento);
 
     if (vendedor == null) {
 

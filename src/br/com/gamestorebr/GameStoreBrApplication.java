@@ -2,7 +2,6 @@ package br.com.gamestorebr;
 
 import br.com.gamestorebr.core.exception.NotFoundException;
 import br.com.gamestorebr.form.cliente.VisualizarClienteFormController;
-import br.com.gamestorebr.form.vendedor.VendedorFormController;
 import br.com.gamestorebr.form.vendedor.VisualizarVendedorFormController;
 import br.com.gamestorebr.util.AlertHelper;
 import br.com.gamestorebr.util.DataBase;
@@ -47,7 +46,6 @@ public class GameStoreBrApplication extends Application {
   public static void changeScene(final String fxml) throws IOException {
 
     final FXMLLoader loader = new FXMLLoader(GameStoreBrApplication.class.getResource(fxml));
-    final VendedorFormController controller = loader.getController();
     final Parent pane = FXMLLoader.load(GameStoreBrApplication.class.getResource(fxml));
     primaryStage.getScene().setRoot(pane);
   }

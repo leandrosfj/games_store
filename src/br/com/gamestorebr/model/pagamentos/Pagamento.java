@@ -1,6 +1,5 @@
 package br.com.gamestorebr.model.pagamentos;
 
-
 import br.com.gamestorebr.model.pessoa.Comprador;
 import br.com.gamestorebr.model.pessoa.Vendedor;
 
@@ -19,14 +18,14 @@ public abstract class Pagamento {
   }
 
   protected Double getValorTotal() {
-    return this.valorTotal;
+    return valorTotal;
   }
 
   protected boolean compradorPossuiSaldoNecessarioParaTransacao() {
 
-    if (this.meioPagamentoPrecisaValidarSaldoComprador()) {
+    if (meioPagamentoPrecisaValidarSaldoComprador()) {
 
-      return (this.comprador.getSaldo() > (this.valorTotal + this.getValorTaxa()));
+      return (comprador.getSaldo() > (valorTotal + getValorTaxa()));
 
     } else {
 
@@ -36,16 +35,14 @@ public abstract class Pagamento {
 
   public boolean realizarTransacaoFinanceira() {
 
-    if (!this.compradorPossuiSaldoNecessarioParaTransacao()) {
-
-      System.out.println("Comprador não possui saldo necessário para concluir a operação.");
+    if (!compradorPossuiSaldoNecessarioParaTransacao()) {
 
       return false;
     }
 
-    this.debitarValoresComprador();
+    debitarValoresComprador();
 
-    this.creditoValoresVendedor();
+    creditoValoresVendedor();
 
     return true;
   }

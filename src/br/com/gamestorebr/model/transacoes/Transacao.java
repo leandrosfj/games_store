@@ -3,7 +3,6 @@ package br.com.gamestorebr.model.transacoes;
 import br.com.gamestorebr.model.pagamentos.Pagamento;
 import br.com.gamestorebr.model.pessoa.Comprador;
 import br.com.gamestorebr.model.pessoa.Vendedor;
-import br.com.gamestorebr.model.produtos.Produto;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -12,29 +11,44 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class Transacao {
 
-  private final String codigo;
+  private String codigo;
   private Comprador comprador;
   private Vendedor vendedor;
   private Pagamento pagamento;
-  private List<Produto> produtos = new ArrayList<>();
+  private List<TransacaoItem> transacoesItens = new ArrayList<>();
 
   public Transacao() {
     super();
-    this.codigo = UUID.randomUUID().toString();
+    codigo = UUID.randomUUID().toString();
+  }
+
+  public Transacao(
+      final Comprador comprador,
+      final Vendedor vendedor,
+      final List<TransacaoItem> transacoesItens) {
+
+    this.comprador = comprador;
+    this.vendedor = vendedor;
+    this.transacoesItens = transacoesItens;
   }
 
   public Double getValorTotal() {
-    //    return this.produtosSet.stream().mapToDouble(Produto::getPrecoUnitario).sum();
 
     final AtomicReference<Double> valorTotal = new AtomicReference<>(0d);
 
-    this.produtos.forEach(produto -> valorTotal.updateAndGet(v -> v + produto.getPrecoUnitario()));
+    transacoesItens.forEach(
+        transacaoItem ->
+            valorTotal.updateAndGet(
+                valorTotalAcumulado ->
+                    valorTotalAcumulado
+                        + (transacaoItem.getProduto().getPrecoUnitario()
+                            * transacaoItem.getQuantidade())));
 
     return valorTotal.get();
   }
 
   public Comprador getComprador() {
-    return this.comprador;
+    return comprador;
   }
 
   public void setComprador(final Comprador comprador) {
@@ -42,7 +56,7 @@ public class Transacao {
   }
 
   public Vendedor getVendedor() {
-    return this.vendedor;
+    return vendedor;
   }
 
   public void setVendedor(final Vendedor vendedor) {
@@ -50,23 +64,23 @@ public class Transacao {
   }
 
   public Pagamento getPagamento() {
-    return this.pagamento;
+    return pagamento;
   }
 
   public void setPagamento(final Pagamento pagamento) {
     this.pagamento = pagamento;
   }
 
-  public List<Produto> getProdutos() {
-    return this.produtos;
+  public List<TransacaoItem> getTransacoesItens() {
+    return transacoesItens;
   }
 
-  public void setProdutos(final List<Produto> produtos) {
-    this.produtos = produtos;
+  public void setTransacoesItens(final List<TransacaoItem> transacoesItens) {
+    this.transacoesItens = transacoesItens;
   }
 
   public String getCodigo() {
-    return this.codigo;
+    return codigo;
   }
 
   @Override
@@ -74,35 +88,35 @@ public class Transacao {
     if (this == o) {
       return true;
     }
-    if (o == null || this.getClass() != o.getClass()) {
+    if (o == null || getClass() != o.getClass()) {
       return false;
     }
     final Transacao transacao = (Transacao) o;
-    return this.comprador.equals(transacao.comprador)
-        && this.vendedor.equals(transacao.vendedor)
-        && this.pagamento.equals(transacao.pagamento)
-        && this.produtos.equals(transacao.produtos);
+    return comprador.equals(transacao.comprador)
+        && vendedor.equals(transacao.vendedor)
+        && pagamento.equals(transacao.pagamento)
+        && transacoesItens.equals(transacao.transacoesItens);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(this.comprador, this.vendedor, this.pagamento, this.produtos);
+    return Objects.hash(comprador, vendedor, pagamento, transacoesItens);
   }
 
   @Override
   public String toString() {
     return "Transacao{"
         + "codigo='"
-        + this.codigo
+        + codigo
         + '\''
         + ", comprador="
-        + this.comprador
+        + comprador
         + ", vendedor="
-        + this.vendedor
+        + vendedor
         + ", pagamento="
-        + this.pagamento
+        + pagamento
         + ", produtosSet="
-        + this.produtos
+        + transacoesItens
         + '}';
   }
 }

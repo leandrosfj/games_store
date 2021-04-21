@@ -21,7 +21,7 @@ public class MenuFormController {
 
   @FXML
   protected void handleCadastrarCompraButtonAction(final ActionEvent event) throws IOException {
-    GameStoreBrApplication.changeScene("registration_form.fxml");
+    GameStoreBrApplication.changeScene("form/compra/compra_form.fxml");
   }
 
   @FXML

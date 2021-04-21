@@ -2,7 +2,6 @@ package br.com.gamestorebr.form.vendedor;
 
 import br.com.gamestorebr.GameStoreBrApplication;
 import br.com.gamestorebr.model.pessoa.Vendedor;
-import br.com.gamestorebr.model.produtos.Produto;
 import br.com.gamestorebr.repository.VendedorRepository;
 import br.com.gamestorebr.util.DataBase;
 import java.io.IOException;
@@ -102,8 +101,8 @@ public class VisualizarVendedorFormController implements Initializable {
                 .map(
                     venda -> {
                       final String produtosString =
-                          venda.getProdutos().stream()
-                              .map(Produto::getNome)
+                          venda.getTransacoesItens().stream()
+                              .map(transacaoItem -> transacaoItem.getProduto().getNome())
                               .collect(Collectors.joining(", "));
 
                       return new TableViewVendasItem(

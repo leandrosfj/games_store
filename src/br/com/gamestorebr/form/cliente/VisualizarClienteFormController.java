@@ -2,7 +2,6 @@ package br.com.gamestorebr.form.cliente;
 
 import br.com.gamestorebr.GameStoreBrApplication;
 import br.com.gamestorebr.model.pessoa.Comprador;
-import br.com.gamestorebr.model.produtos.Produto;
 import br.com.gamestorebr.repository.CompradorRepository;
 import br.com.gamestorebr.util.DataBase;
 import java.io.IOException;
@@ -77,8 +76,8 @@ public class VisualizarClienteFormController implements Initializable {
                 .map(
                     compra -> {
                       final String produtosString =
-                          compra.getProdutos().stream()
-                              .map(Produto::getNome)
+                          compra.getTransacoesItens().stream()
+                              .map(transacaoItem -> transacaoItem.getProduto().getNome())
                               .collect(Collectors.joining(", "));
 
                       return new TableViewComprasItem(

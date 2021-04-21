@@ -23,24 +23,24 @@ public class Vendedor extends Pessoa {
     super();
   }
 
-  public Vendedor(String nome, String documento) {
+  public Vendedor(final String nome, final String documento) {
 
     super(nome, 0., documento);
   }
 
   public List<ContaPagarReceber> getValoresAReceber() {
 
-    return this.valoresAReceber;
+    return valoresAReceber;
   }
 
   public Map<Integer, Produto> getCatalogo() {
 
-    return this.catalogo;
+    return catalogo;
   }
 
   public Set<Transacao> getVendas() {
 
-    return this.vendas;
+    return vendas;
   }
 
   @Override
@@ -48,16 +48,16 @@ public class Vendedor extends Pessoa {
     if (this == o) {
       return true;
     }
-    if (o == null || this.getClass() != o.getClass()) {
+    if (o == null || getClass() != o.getClass()) {
       return false;
     }
     final Vendedor vendedor = (Vendedor) o;
-    return this.getDocumento().equals(vendedor.getDocumento());
+    return getDocumento().equals(vendedor.getDocumento());
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(this.getDocumento());
+    return Objects.hash(getDocumento());
   }
 
   @Override
@@ -69,7 +69,8 @@ public class Vendedor extends Pessoa {
         transacao -> {
           vendas
               .append("    [")
-              .append(transacao.getCodigo()).append("] - ")
+              .append(transacao.getCodigo())
+              .append("] - ")
               .append("Comprador: ")
               .append(transacao.getComprador().getNome())
               .append(" - Total Bruto R$ ")
@@ -81,18 +82,18 @@ public class Vendedor extends Pessoa {
 
     final StringBuilder valoresReceber = new StringBuilder();
 
-    this.valoresAReceber.forEach(conta -> valoresReceber.append(conta.toString()));
+    valoresAReceber.forEach(conta -> valoresReceber.append(conta.toString()));
 
     final StringBuilder catalogoString = new StringBuilder();
 
-    this.catalogo.values().forEach(item -> catalogoString.append(item.toString()));
+    catalogo.values().forEach(item -> catalogoString.append(item.toString()));
 
     return "Nome: "
-        + this.getNome()
+        + getNome()
         + "\nCNPJ: "
-        + this.getDocumento()
+        + getDocumento()
         + "\nSaldo: R$ "
-        + this.getSaldo()
+        + getSaldo()
         + "\nVendas:\n"
         + vendas.toString()
         + "\nValores a receber:\n"
@@ -101,5 +102,10 @@ public class Vendedor extends Pessoa {
         + catalogoString.toString();
   }
 
-
+  public Produto getProdutoByName(final String nomeProduto) {
+    return getCatalogo().values().stream()
+        .filter(produto -> produto.getNome().equals(nomeProduto))
+        .findFirst()
+        .orElse(null);
+  }
 }

@@ -12,27 +12,38 @@ public class CompradorRepository {
 
   public void add(final Comprador comprador) {
 
-    if (this.registros.get(comprador.getDocumento()) != null) {
+    if (registros.get(comprador.getDocumento()) != null) {
 
       System.out.println("\nERRO: Comprador já cadastrado para CPF informado...");
 
       return;
     }
 
-    this.registros.putIfAbsent(comprador.getDocumento(), comprador);
+    registros.putIfAbsent(comprador.getDocumento(), comprador);
 
     System.out.println("\nComprador cadastrado com sucesso!");
   }
 
   public Comprador get(final String cpf) {
-    return this.registros.get(cpf);
+    return registros.get(cpf);
+  }
+
+  public void update(final Comprador comprador) {
+    registros.put(comprador.getDocumento(), comprador);
+  }
+
+  public Comprador getByName(final String nome) {
+    return registros.values().stream()
+        .filter(comprador -> comprador.getNome().equals(nome))
+        .findFirst()
+        .orElse(null);
   }
 
   public void delete(final String cpf) {
-    this.registros.remove(cpf);
+    registros.remove(cpf);
   }
 
   public List<Comprador> listAll() {
-    return new ArrayList<>(this.registros.values());
+    return new ArrayList<>(registros.values());
   }
 }

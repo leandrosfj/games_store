@@ -10,14 +10,14 @@ public class PagamentoFactory {
       final Comprador comprador,
       final Vendedor vendedor,
       final Double valorTotal,
-      final Integer tipoPagamento) {
+      final String tipoPagamento) {
 
     return switch (tipoPagamento) {
 
-      case 1 -> new Boleto(comprador, vendedor, valorTotal);
-      case 2 -> new Credito(comprador, vendedor, valorTotal);
-      case 3 -> new Debito(comprador, vendedor, valorTotal);
-      case 4 -> new Pix(comprador, vendedor, valorTotal);
+      case "Boleto" -> new Boleto(comprador, vendedor, valorTotal);
+      case "Crédito" -> new Credito(comprador, vendedor, valorTotal);
+      case "Débito" -> new Debito(comprador, vendedor, valorTotal);
+      case "Pix" -> new Pix(comprador, vendedor, valorTotal);
       default -> null;
     };
   }
