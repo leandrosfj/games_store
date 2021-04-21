@@ -126,9 +126,6 @@
       <TableColumn fx:id="valorTotalCol" editable="false"
         style="-fx-alignment: CENTER-RIGHT;" text="Total"/>
 
-      <TableColumn fx:id="removerCol" editable="false" maxWidth="200" minWidth="100"
-        style="-fx-alignment: CENTER-RIGHT;" text="Remover"/>
-
     </columns>
   </TableView>
 
@@ -144,7 +141,7 @@
     style="-fx-alignment: CENTER-RIGHT;"/>
 
   <Button fx:id="voltarCompraButton" defaultButton="false"
-    onAction="#handleVoltarCompraButtonAction" prefHeight="40" prefWidth="100" text="Voltar"
+    onAction="#handleVoltarCompraButtonAction" prefHeight="40" prefWidth="100" text="Cancelar"
     GridPane.columnIndex="0" GridPane.columnSpan="1" GridPane.halignment="LEFT"
     GridPane.rowIndex="7" GridPane.rowSpan="1">
     <GridPane.margin>

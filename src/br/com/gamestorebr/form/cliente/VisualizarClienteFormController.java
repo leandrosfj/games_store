@@ -82,8 +82,8 @@ public class VisualizarClienteFormController implements Initializable {
 
                       return new TableViewComprasItem(
                           compra.getVendedor().getNome(),
-                          compra.getPagamento().toString(),
                           produtosString,
+                          compra.getPagamento().toString(),
                           compra.getValorTotal());
                     })
                 .collect(Collectors.toList()));

@@ -34,16 +34,4 @@
     - Crédito: Coloca o valor na lista de valores a pagar do comprador e adiciona nos valores a
       receber do vendedor, descontado da taxa percentual de cobrança da operadora do cartão.
 
-> To Do:
-
-> A interface para o cadastro das compras deve implementar uma estrutura de carrinho de compras que vai sendo preenchido à medida que o usuário inclui os itens.
-
-> Se a data de validade do boleto já tiver expirado, o sistema deve lançar uma exceção.
-
-> Utilize uma classe abstrata FormaPagamento com um método abstrato para tratar o pagamento. Crie uma classe concreta para cada forma de pagamento que herde de FormaPagamento e implemente o método abstrato.
-
-> Utilize corretamente generics no uso das coleções da Java Collection.
-
-> Utilize corretamente o tipo especial Enum.
-
 

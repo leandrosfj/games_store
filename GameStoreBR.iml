@@ -7,20 +7,22 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="GameStoreBR" level="project" />
+    <orderEntry type="library" name="JavaFXApp" level="project" />
     <orderEntry type="module-library">
-      <library name="javafx-fxml">
+      <library>
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/15/javafx-fxml-15.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/15/javafx-fxml-15-linux.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/15/javafx-controls-15.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/15/javafx-controls-15-linux.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/15/javafx-graphics-15.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/15/javafx-graphics-15-linux.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-base/15/javafx-base-15.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-base/15/javafx-base-15-linux.jar!/" />
+          <root url="file://$USER_HOME$/Library/javafx-sdk-16/lib" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <NATIVE>
+          <root url="file://$USER_HOME$/Library/javafx-sdk-16/lib" />
+        </NATIVE>
+        <SOURCES>
+          <root url="file://$USER_HOME$/Library/javafx-sdk-16/lib" />
+        </SOURCES>
+        <jarDirectory url="file://$USER_HOME$/Library/javafx-sdk-16/lib" recursive="false" />
+        <jarDirectory url="file://$USER_HOME$/Library/javafx-sdk-16/lib" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
     <orderEntry type="library" name="lib" level="project" />

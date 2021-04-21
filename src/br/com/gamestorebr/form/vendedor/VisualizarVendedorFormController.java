@@ -107,8 +107,8 @@ public class VisualizarVendedorFormController implements Initializable {
 
                       return new TableViewVendasItem(
                           venda.getComprador().getNome(),
-                          venda.getPagamento().toString(),
                           produtosString,
+                          venda.getPagamento().toString(),
                           venda.getValorTotal());
                     })
                 .collect(Collectors.toList()));

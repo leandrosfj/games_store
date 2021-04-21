@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c4f790c0-ff3f-4af8-9d34-2802c44de1c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/GameStoreBR.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/JavaFXApp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ant.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/JavaFXApp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/saveactions_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameStoreBR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GameStoreBR.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/JavaFXApp/JavaFXApp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/JavaFXApp/JavaFXApp.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameStoreBR/br/com/gamestorebr/form/cliente/VisualizarClienteFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameStoreBR/br/com/gamestorebr/form/cliente/VisualizarClienteFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameStoreBR/br/com/gamestorebr/form/compra/compra_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameStoreBR/br/com/gamestorebr/form/compra/compra_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameStoreBR/br/com/gamestorebr/form/vendedor/VisualizarVendedorFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameStoreBR/br/com/gamestorebr/form/vendedor/VisualizarVendedorFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameStoreBR/br/com/gamestorebr/model/pagamentos/PagamentoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameStoreBR/br/com/gamestorebr/model/pagamentos/PagamentoFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/gamestorebr/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/gamestorebr/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/gamestorebr/form/cliente/VisualizarClienteFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/gamestorebr/form/cliente/VisualizarClienteFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/gamestorebr/form/compra/compra_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/gamestorebr/form/compra/compra_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/gamestorebr/form/vendedor/VisualizarVendedorFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/gamestorebr/form/vendedor/VisualizarVendedorFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/gamestorebr/model/pagamentos/PagamentoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/gamestorebr/model/pagamentos/PagamentoFactory.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1rSUAP4bleYUKEUcaasLOG5MPSA" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Library/javafx-sdk-16/lib" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="com.github.kisstkondoros.codemetrics.configuration.EditorConfig" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="GameStoreBrApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.gamestorebr.GameStoreBrApplication" />
+      <module name="GameStoreBR" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;$USER_HOME$/Library/javafx-sdk-16/lib&quot; --add-modules=javafx.controls,javafx.fxml" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GameStoreBrApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4f790c0-ff3f-4af8-9d34-2802c44de1c6" name="Default Changelist" comment="" />
+      <created>1618968840889</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618968840889</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
