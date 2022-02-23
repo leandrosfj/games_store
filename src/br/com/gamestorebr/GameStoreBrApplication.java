@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 
 public class GameStoreBrApplication extends Application {
 
-  private static Stage primaryStage;
+  private static Stage primaryStageasdadasd;
 
   @Override
   public void start(final Stage stage) {
@@ -32,11 +32,11 @@ public class GameStoreBrApplication extends Application {
 
       final Parent root = FXMLLoader.load(getClass().getResource("form/menu/menu_form.fxml"));
 
-      primaryStage = stage;
-      primaryStage.setTitle("Game Store BR");
-      primaryStage.setScene(new Scene(root, 1024, 768));
-      primaryStage.setResizable(false);
-      primaryStage.show();
+      primaryStageasdadasd = stage;
+      primaryStageasdadasd.setTitle("Game Store BR");
+      primaryStageasdadasd.setScene(new Scene(root, 1024, 768));
+      primaryStageasdadasd.setResizable(false);
+      primaryStageasdadasd.show();
 
     } catch (final Throwable t) {
       showErrorDialog(Thread.currentThread(), t);
@@ -47,7 +47,7 @@ public class GameStoreBrApplication extends Application {
 
     final FXMLLoader loader = new FXMLLoader(GameStoreBrApplication.class.getResource(fxml));
     final Parent pane = FXMLLoader.load(GameStoreBrApplication.class.getResource(fxml));
-    primaryStage.getScene().setRoot(pane);
+    primaryStageasdadasd.getScene().setRoot(pane);
   }
 
   @FXML
@@ -63,7 +63,7 @@ public class GameStoreBrApplication extends Application {
     final VisualizarVendedorFormController controller = loader.getController();
 
     controller.carregarVendedor(documento);
-    primaryStage.getScene().setRoot(pane);
+    primaryStageasdadasd.getScene().setRoot(pane);
   }
 
   @FXML
@@ -78,7 +78,7 @@ public class GameStoreBrApplication extends Application {
     final VisualizarClienteFormController controller = loader.getController();
 
     controller.carregarCliente(documento);
-    primaryStage.getScene().setRoot(pane);
+    primaryStageasdadasd.getScene().setRoot(pane);
   }
 
   public static void main(final String[] args) {
@@ -92,7 +92,7 @@ public class GameStoreBrApplication extends Application {
     if (e instanceof NotFoundException) {
       AlertHelper.showAlert(
           AlertType.WARNING,
-          primaryStage.getScene().getWindow(),
+          primaryStageasdadasd.getScene().getWindow(),
           "Atenção!",
           e.getLocalizedMessage());
       return;
@@ -100,7 +100,7 @@ public class GameStoreBrApplication extends Application {
 
     AlertHelper.showAlert(
         Alert.AlertType.ERROR,
-        primaryStage.getScene().getWindow(),
+        primaryStageasdadasd.getScene().getWindow(),
         "Erro!",
         "Não foi possível realizar operação! " + e.getMessage());
   }
